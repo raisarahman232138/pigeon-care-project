@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pigeon Care System</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🐦 Pigeon Care Tracker</h1>
+
+    <input type="text" id="name" placeholder="Pigeon Name">
+    <input type="number" id="age" placeholder="Age">
+    <input type="number" id="weight" placeholder="Weight">
+    <button onclick="addPigeon()">Add</button>
+
+    <h2>Pigeon List</h2>
+    <table id="table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Weight</th>
+        </tr>
+    </table>
+
+    <script>
+        function addPigeon() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let weight = document.getElementById("weight").value;
+
+            let table = document.getElementById("table");
+            let row = table.insertRow();
+
+            row.insertCell(0).innerHTML = name;
+            row.insertCell(1).innerHTML = age;
+            row.insertCell(2).innerHTML = weight;
+        }
+    </script>
+
+</body>
+</html>
